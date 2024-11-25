@@ -4,8 +4,7 @@ public class Produto {
 
     private int codigo;
     private String descricao;
-    //Visibilidade de pacote (package) ou default
-    double preco;
+    public double preco;
     private Categoria categoria;
 
     public Produto(int codigo, String descricao, double preco, Categoria categoria) {
@@ -39,4 +38,8 @@ public class Produto {
         this.categoria = categoria;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s \n Preço: R$ %.2f\n Categoria: %s", descricao, preco, categoria);
+    }
 }

@@ -23,12 +23,11 @@ public class Venda {
         return total;
     }
 
-    public boolean adicionarItem(Item item){
+    public void adicionarItem(Item item){
         if(quantidadeItens == itens.length){
             itens = Arrays.copyOf(itens, itens.length+3);
         }
         itens[quantidadeItens++] = item;
-        return true;
     }
 
     public Item[] getItens(){

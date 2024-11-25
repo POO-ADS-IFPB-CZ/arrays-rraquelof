@@ -40,4 +40,11 @@ public class Item {
         return produto.preco*quantidade;
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "Item codigo: %d\n Produto: %s\n Quantidade: %.2f\n",
+                codigo, produto, quantidade
+        );
+    }
 }
